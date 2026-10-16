@@ -1,0 +1,73 @@
+# Nothing that belongs to the game ever goes in here. Blocked by extension, so it cannot slip in
+# by accident, and not as a substitute for reading NOTICE.md.
+
+# disc images and dumps
+*.bin
+*.BIN
+*.iso
+*.img
+*.chd
+*.pbp
+*.ecm
+ctr-u.bin*
+
+# the disc, split for the Device Portal (partir_disco.py)
+*.partes
+ctr-u.bin.[0-9][0-9][0-9]
+
+# executables, debug info and packages
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+*.appxsym
+*.appxupload
+
+# signing certificates: yours is yours
+*.pfx
+*.p12
+*.cer
+*.snk
+
+# saves and logs
+*.mcd
+*.mcr
+*.srm
+*.sav
+*.vmp
+Crash Team Racing.log*
+
+# leftovers of a CTRPad checkout, in case this is cloned inside one
+build/
+build-*/
+layout-uwp/
+paquete/
+partes/
+# Solo la de la RAIZ, donde CTRPad pone el disco: en Windows git ignora sin distinguir
+# mayusculas, y "assets/" se llevaba por delante package/Assets/ con sus dos README.
+/assets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# editors and OS
+.vs/
+.vscode/
+.idea/
+*.swp
+*.log
+*.tmp
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# The package tiles are supplied by whoever packages (docs/ASSETS.md); no game art is distributed here.
+package/Assets/*.png

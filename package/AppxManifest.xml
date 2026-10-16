@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ctr-xbox (Recompilaciones) — el manifiesto del paquete UWP.
+
+     CÁMBIALO antes de compilar: tres datos son de quien firma, y si el Publisher no es exactamente
+     el sujeto del certificado con que firmas, signtool falla (construir-uwp.ps1 lo comprueba antes).
+
+       · Identity Name          el nombre del paquete. Pon el tuyo.
+       · Identity Publisher     IDÉNTICO al sujeto de tu certificado, letra por letra
+                                (Get-ChildItem Cert:\CurrentUser\My | Format-List Subject, Thumbprint).
+       · PhoneProductId         un GUID propio: [guid]::NewGuid() en PowerShell.
+       · PublisherDisplayName y DisplayName: lo que quieras que lea la consola.
+
+     La Version la pone tools\construir-uwp.ps1 con su -Version, y SUBE en cada paquete: la consola
+     no reemplaza un paquete por otro de la misma versión. docs/INSTALL.es.md §5. -->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap mp rescap">
+
+  <Identity
+    Name="CHANGE-ME-CrashTeamRacing"
+    Publisher="CN=CHANGE-ME"
+    Version="1.0.0.0"
+    ProcessorArchitecture="x64" />
+
+  <mp:PhoneIdentity PhoneProductId="00000000-0000-0000-0000-000000000001" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Crash Team Racing Decomp</DisplayName>
+    <PublisherDisplayName>CHANGE-ME</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <!-- ⚠ La dependencia de VCLibs NO es opcional y NO se sustituye metiendo las DLL dentro del
+       paquete: sin esta línea el paquete se instala pero la activación falla con 0x8027025B,
+       sin más explicación (pasó aquí el 2026-10-10, igual que en Animal Crossing). El
+       ejecutable y el SDL3 importan vcruntime140_app.dll y msvcp140_app.dll. -->
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
+    <!-- MinVersion baja a propósito: la consola ya tiene el framework (lo instalaron otros
+         ports) y exigir una versión mayor que la suya aborta la instalación con -2147009293. -->
+    <PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.0.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+  </Dependencies>
+
+  <!-- ⚠ Nada de Language="x-generate": ese token lo sustituye MSBuild y aquí se empaqueta a
+       mano con makeappx; la consola lo despliega y falla al registrarlo con 0x80070057. -->
+  <Resources>
+    <Resource Language="EN-US"/>
+    <Resource uap:Scale="200"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="ctr_native.exe" EntryPoint="ctr_native.exe">
+      <uap:VisualElements
+        DisplayName="Crash Team Racing Decomp"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="Port UWP de Crash Team Racing (decomp CTR-ModSDK, port CTRPad) para Xbox Series X en modo desarrollador"
+        BackgroundColor="transparent">
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:DefaultTile/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+    <rescap:Capability Name="broadFileSystemAccess" />
+    <rescap:Capability Name="expandedResources" />
+    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage"/>
+    <Capability Name="codeGeneration"/>
+  </Capabilities>
+</Package>
