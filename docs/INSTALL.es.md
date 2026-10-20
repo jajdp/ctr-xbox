@@ -72,7 +72,7 @@ $?
 | **Python 3** | Aplicar la receta. Nada más que la biblioteca estándar |
 | **Git** | El parche se aplica con `git apply`, así que CTRPad tiene que estar **clonado**, no descargado como zip |
 | **Tu propio disco** | Un volcado NTSC-U de `SCUS-94426`. El port lo quiere con el nombre `ctr-u.bin` |
-| **Una Xbox Series en modo desarrollador** | Instalar el paquete |
+| **Una Xbox Series X en modo desarrollador** | Instalar el paquete |
 
 ---
 

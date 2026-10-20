@@ -2,7 +2,7 @@
 
 How to take [CTRPad](https://github.com/chrissotraidis/ctrpad) — the native port of *Crash Team
 Racing* (PlayStation, 1999, `SCUS-94426`) to real 64-bit, on top of the
-[CTR-ModSDK](https://github.com/CTR-tools/CTR-ModSDK) decompilation — and run it **on an Xbox Series
+[CTR-ModSDK](https://github.com/CTR-tools/CTR-ModSDK) decompilation — and run it **on an Xbox Series X
 in Developer Mode**, as a UWP package you build and sign yourself.
 
 *(Español: [README.es.md](README.es.md))*
@@ -11,6 +11,16 @@ It is not a theory: the game boots, has sound, plays the Sony presentation and t
 intro, takes controller input and runs at **32.9 FPS** — the original game's rate — in **full-screen
 16:9**, **in Spanish**, and at **60 frames per second** if you ask for it. It is installed and
 tested on two consoles.
+
+## Which console this was tested on
+
+**An Xbox Series X**, in Developer Mode. Both of the consoles this was built and tested on are Series X,
+so that is the only hardware anything claimed here covers.
+
+**A Series S has never been tried — not once.** It is a different machine: less memory available to a
+game and a weaker GPU. This may work on one, it may run slower, or it may not start at all; nothing here
+has been measured on it. If you run it on a Series S, what you get is not what this README reports, and
+none of the numbers here are a promise about that console.
 
 ## What this repository is
 

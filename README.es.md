@@ -2,7 +2,7 @@
 
 Cómo coger [CTRPad](https://github.com/chrissotraidis/ctrpad) —el port nativo de *Crash Team
 Racing* (PlayStation, 1999, `SCUS-94426`) a 64 bits de verdad, sobre la decompilación de
-[CTR-ModSDK](https://github.com/CTR-tools/CTR-ModSDK)— y hacerlo correr **en una Xbox Series en modo
+[CTR-ModSDK](https://github.com/CTR-tools/CTR-ModSDK)— y hacerlo correr **en una Xbox Series X en modo
 desarrollador**, como un paquete UWP que compilas y firmas tú.
 
 *(English: [README.md](README.md))*
@@ -11,6 +11,16 @@ No es una teoría: el juego arranca, suena, pasa la presentación de Sony y la i
 se navega con mando y corre a **32,9 FPS** —los del juego original—, en **16:9 a pantalla completa**,
 **en español** y, si lo pides, **a 60 imágenes por segundo**. Está instalado y probado en dos
 consolas.
+
+## En qué consola se probó
+
+**En una Xbox Series X**, en modo desarrollador. Las dos consolas en las que se construyó y se probó esto
+son Series X, así que es el único hardware al que se refiere cualquier cosa que se afirme aquí.
+
+**En una Series S no se ha probado nunca, ni una vez.** Es otra máquina: menos memoria disponible para un
+juego y una GPU más floja. Puede que funcione en una, puede que vaya más despacio, o puede que no
+arranque; nada de aquí se ha medido en ella. Si lo ejecutas en una Series S, lo que obtengas no es lo que
+dice este README, y ninguna de las cifras de aquí es una promesa sobre esa consola.
 
 ## Qué es este repositorio
 

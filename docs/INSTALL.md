@@ -68,7 +68,7 @@ $?
 | **Python 3** | Applying the recipe. Standard library only |
 | **Git** | The patch is applied with `git apply`, so CTRPad has to be **cloned**, not downloaded as a zip |
 | **Your own disc** | An NTSC-U dump of `SCUS-94426`. The port wants it named `ctr-u.bin` |
-| **An Xbox Series in Developer Mode** | Installing the package |
+| **An Xbox Series X in Developer Mode** | Installing the package |
 
 ---
 
