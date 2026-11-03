@@ -36,12 +36,12 @@
 
   <!-- ⚠ La dependencia de VCLibs NO es opcional y NO se sustituye metiendo las DLL dentro del
        paquete: sin esta línea el paquete se instala pero la activación falla con 0x8027025B,
-       sin más explicación (pasó aquí el 2026-10-10, igual que en Animal Crossing). El
-       ejecutable y el SDL3 importan vcruntime140_app.dll y msvcp140_app.dll. -->
+       sin más explicación. El ejecutable y el SDL3 importan vcruntime140_app.dll y
+       msvcp140_app.dll. -->
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
-    <!-- MinVersion baja a propósito: la consola ya tiene el framework (lo instalaron otros
-         ports) y exigir una versión mayor que la suya aborta la instalación con -2147009293. -->
+    <!-- MinVersion baja a propósito: exigir una versión mayor que la que la consola tenga
+         instalada aborta la instalación con -2147009293. -->
     <PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.0.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
 
