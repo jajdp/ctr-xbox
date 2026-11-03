@@ -100,6 +100,24 @@ was measured, is in **[`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md)**.
 
 ## Credits and license
 
+**Almost none of what makes this work is ours.** This repository is a recipe that glues together other people's work; without any one of these pieces there would be no port at all.
+
+| What it does | Who made it | License |
+|---|---|---|
+| **[ctrpad](https://github.com/chrissotraidis/ctrpad)** — the *Crash Team Racing* port this builds on | **chrissotraidis** | GPL-3.0 |
+| **[CTR-ModSDK](https://github.com/CTR-tools/CTR-ModSDK)** — CTR modding tools and research | the **CTR-tools** team | see the project |
+| **[uwp-dep](https://github.com/worleydl/uwp-dep)** — Dawn, SDL3, nod and dxcompiler **built for UWP** — the single reason any of this runs on an Xbox | **Daniel Worley** (worleydl) | libuwp: zlib, © 2025 |
+| **[SDL3-uwp](https://github.com/XboxEmulationHub/SDL3-uwp)** — SDL3 built for UWP | **XboxEmulationHub** | zlib |
+| **[Crash-Team-Racing-High-Octane](https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane)** — the CTR sourceport it descends from | **Rinnegatamante** | GPL-3.0 |
+| **[ctr-native](https://github.com/CTR-tools/ctr-native)** — native CTR tooling | the **CTR-tools** team | see the project |
+| **[SDL](https://github.com/libsdl-org/SDL)** — window, input and audio | **Sam Lantinga** and the SDL contributors | zlib |
+| **[Mesa](https://mesa3d.org)** — the OpenGL implementation used on the console | the **Mesa** contributors | MIT |
+
+Special mention to **Daniel Worley**: the UWP builds in `uwp-dep` are what make an Xbox port of this possible. We did not build them, we used them.
+
+**The packaging recipe, the tooling and this documentation** are by **Recompilaciones**.
+
+
 Port and tooling by **Recompilaciones**. Released under the [GPL-3.0-or-later](LICENSE), the same
 license as CTRPad and CTR Native, which this derives from. Widescreen and 60 FPS are ported from
 [CTR: High Octane](https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane) (GPL-3.0) with

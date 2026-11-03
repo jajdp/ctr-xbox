@@ -101,6 +101,24 @@ lo que se midió, está en **[`docs/HOW-IT-WORKS.es.md`](docs/HOW-IT-WORKS.es.md
 
 ## Créditos y licencia
 
+**Casi nada de lo que hace que esto funcione es nuestro.** Este repositorio es una receta que une el trabajo de otros; sin cualquiera de estas piezas no habría port.
+
+| Qué hace | Quién lo hizo | Licencia |
+|---|---|---|
+| **[ctrpad](https://github.com/chrissotraidis/ctrpad)** — el port de *Crash Team Racing* sobre el que se construye | **chrissotraidis** | GPL-3.0 |
+| **[CTR-ModSDK](https://github.com/CTR-tools/CTR-ModSDK)** — herramientas e investigación de mods de CTR | the **CTR-tools** team | see the project |
+| **[uwp-dep](https://github.com/worleydl/uwp-dep)** — Dawn, SDL3, nod y dxcompiler **compilados para UWP**: la única razón por la que algo de esto corre en una Xbox | **Daniel Worley** (worleydl) | libuwp: zlib, © 2025 |
+| **[SDL3-uwp](https://github.com/XboxEmulationHub/SDL3-uwp)** — SDL3 compilado para UWP | **XboxEmulationHub** | zlib |
+| **[Crash-Team-Racing-High-Octane](https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane)** — el sourceport de CTR del que desciende | **Rinnegatamante** | GPL-3.0 |
+| **[ctr-native](https://github.com/CTR-tools/ctr-native)** — herramientas nativas de CTR | the **CTR-tools** team | see the project |
+| **[SDL](https://github.com/libsdl-org/SDL)** — ventana, mando y audio | **Sam Lantinga** and the SDL contributors | zlib |
+| **[Mesa](https://mesa3d.org)** — la implementación de OpenGL que se usa en la consola | the **Mesa** contributors | MIT |
+
+Mención especial a **Daniel Worley**: las compilaciones UWP de `uwp-dep` son lo que hace posible este port a Xbox. No las hicimos nosotros, las usamos.
+
+**La receta de empaquetado, las herramientas y esta documentación** son de **Recompilaciones**.
+
+
 Port y herramientas de **Recompilaciones**. Publicado bajo la [GPL-3.0-or-later](LICENSE), la misma
 licencia de CTRPad y de CTR Native, de los que esto es un derivado. El panorámico y los 60 FPS están
 portados de [CTR: High Octane](https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane)
